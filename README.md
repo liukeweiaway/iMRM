@@ -1,10 +1,11 @@
 iMRM
 ====
-####Description:
-
+Description:
+------------
 iMRMF is able to simultaneously identify m6A, m5C, m1A, ψ and A-to-I modifications in Homo sapiens, Mus musculus and Saccharomyces cerevisiae.
 
-####Installation:
+Installation:
+-------------
 - <span  style="color: #5bdaed; font-weight: bold">python3.6</span>
 - pandas==0.23.3
 - joblib==0.13.2
@@ -16,7 +17,8 @@ pip install pandas==0.23.3 joblib==0.13.2 xgboost==0.90
 ``` 
 pip install -r yours/requirement.txt
 ``` 
-####Optional arguments:
+Optional arguments:
+-------------------
 ```
   -h, --help            show this help message and exit
   --addresses ADDRESSES
@@ -39,7 +41,8 @@ pip install -r yours/requirement.txt
                         difference in specificity, which are low, normal and
                         high.)
 ```
-####Example:
+Example:
+--------
 ```
 python iMRM.py -i sequence.txt -o ccc.html -s Human -m all -t normal
 ```
