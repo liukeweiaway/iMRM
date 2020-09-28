@@ -2,9 +2,6 @@
 # -*- coding:utf-8-*-
 # author: Liukewei time:2019/1/21 QQ:422209303 e-mail:Liukeweiaway@hotmail.com
 # ----------------------------------------------------------------------------
-from itertools import product
-
-
 def nc(seq, seq_length):
     A = round(seq.count('A') / seq_length, 3)
     U = round(seq.count('U') / seq_length, 3)
@@ -141,7 +138,7 @@ def dnd(seq, seq_length):
 
 
 def onehot(seq, seq_length):
-    global ot
+    ot = [0, 0, 0, 0]
     ONE_HOT = []
     for i in seq:
         if i == 'A':
@@ -157,9 +154,9 @@ def onehot(seq, seq_length):
 
 
 def dbe(seq, seq_length):
+    dot = [0, 0, 0, 0]
     seq_length = len(seq)
-    global dot
-    ONE_HOT = []
+    dbe = []
     for j in range(seq_length - 1):
         if seq[j:j + 2] == 'AA':
             dot = [0, 0, 0, 0]
@@ -193,8 +190,8 @@ def dbe(seq, seq_length):
             dot = [1, 1, 1, 0]
         elif seq[j:j + 2] == 'GG':
             dot = [1, 1, 1, 1]
-        ONE_HOT = ONE_HOT + dot
-    return ONE_HOT
+        dbe = dbe + dot
+    return dbe
 
 
 def dpcp(seq, seq_length):
